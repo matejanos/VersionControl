@@ -24,6 +24,7 @@ namespace UserMaintenance
       
             button1.Text = Resource1.Add;
             button2.Text = Resource1.WriteToFile;
+            button3.Text = Resource1.Delete;
 
 
             listBox1.DataSource = users;
@@ -56,6 +57,16 @@ namespace UserMaintenance
                 } 
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string del = (listBox1.SelectedValue).ToString();
+            var q = from x in users
+                    where (x.ID).ToString() == del
+                    select x;
+
+            users.Remove(q.FirstOrDefault());
         }
     }
 }
