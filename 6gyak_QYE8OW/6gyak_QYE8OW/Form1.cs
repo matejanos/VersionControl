@@ -19,8 +19,8 @@ namespace _6gyak_QYE8OW
 
 
         BindingList<RateData> Rates = new BindingList<RateData>();
-    
-
+        //BindingList<string> Currencies = new BindingList<string>();
+       
 
         public Form1()
         {
@@ -28,6 +28,7 @@ namespace _6gyak_QYE8OW
 
             RefreshData();
             grafikon();
+            
 
 
         }
@@ -66,6 +67,7 @@ namespace _6gyak_QYE8OW
                 if (unit != 0)
                     rate.Value = value / unit;
             }
+            //comboBox1.DataSource = Currencies;
             dataGridView1.DataSource = Rates;
         }
 
