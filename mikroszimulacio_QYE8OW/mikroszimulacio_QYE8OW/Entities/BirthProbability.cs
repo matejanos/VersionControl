@@ -11,5 +11,6 @@ namespace mikroszimulacio_QYE8OW.Entities
         public int Age { get; set; }
         public int NbrOfChildren { get; set; }
         public double P { get; set; }
+        public Gender Gender { get; internal set; }
     }
 }
