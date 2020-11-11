@@ -88,7 +88,7 @@ namespace QYE8OW_VaR
                     sw.Write(Nyereségek[i]);
 
                     sw.WriteLine();
-
+                   
                 }
             }
 
