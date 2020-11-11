@@ -8,6 +8,6 @@ namespace _8gyak_QYE8OW.Abstractions
 {
     public interface IToyFactory
     {
-        Toy CreatNew();
+        Toy CreateNew();
     }
 }

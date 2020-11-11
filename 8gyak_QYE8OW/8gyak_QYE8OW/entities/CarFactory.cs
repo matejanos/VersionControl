@@ -9,7 +9,7 @@ namespace _8gyak_QYE8OW.entities
 {
     public class CarFactory: IToyFactory
     {  
-        public Toy CreatNew()
+        public Toy CreateNew()
         {
             return new Car();
         }

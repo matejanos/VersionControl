@@ -9,13 +9,12 @@ using System.Windows.Forms;
 
 namespace _8gyak_QYE8OW.entities
 {
-    public class Ball : Toy
+    public class Ball :Toy
     {
+
         protected override void DrawImage(Graphics g)
         {
             g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
         }
-
-    
     }
 }
