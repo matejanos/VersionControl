@@ -17,7 +17,6 @@ namespace _8gyak_QYE8OW.Abstractions
             Width = 50;
             Height = Width;
             Paint += Toy_Paint;
-
         }
 
         private void Toy_Paint(object sender, PaintEventArgs e)
@@ -26,11 +25,11 @@ namespace _8gyak_QYE8OW.Abstractions
         }
 
         protected abstract void DrawImage(Graphics g);
-     
 
         public virtual void MoveToy()
         {
             Left += 1;
         }
     }
+
 }
