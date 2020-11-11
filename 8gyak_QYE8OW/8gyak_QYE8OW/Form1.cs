@@ -75,7 +75,7 @@ namespace _8gyak_QYE8OW
         {
             Factory = new BallFactory()
             {
-                BallColor =  button3.BackColor    
+                BallColor = button3.BackColor
             };
         }
 
@@ -89,5 +89,19 @@ namespace _8gyak_QYE8OW
                 return;
             button.BackColor = colorPicker.Color;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Factory = new PresentFactory
+            {
+                Box = button5.BackColor,
+                Ribbon = button6.BackColor
+
+
+            };
+
+        }
+
+    
     }
 }
