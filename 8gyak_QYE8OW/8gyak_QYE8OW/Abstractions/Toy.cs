@@ -31,5 +31,4 @@ namespace _8gyak_QYE8OW.Abstractions
             Left += 1;
         }
     }
-
 }

@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace _8gyak_QYE8OW.entities
 {
-    public class Car :Toy
+    public class PresentFactory : IToyFactory
     {
-        protected override void DrawImage(Graphics g)
+        public Color Ribbon { get; set; }
+        public Color Box { get; set; }
+        public Toy CreateNew()
         {
-            Image imageFile = Image.FromFile("Images/car.png");
-            g.DrawImage(imageFile, new Rectangle(0, 0, Width, Height));
+            return new Present(Ribbon, Box);
         }
     }
 }
