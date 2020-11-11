@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace _8gyak_QYE8OW.entities
 {
-    public class BallFactory: IToyFactory
-    {
+    public class CarFactory: IToyFactory
+    {  
         public Toy CreatNew()
         {
-            return new Ball();
+            return new Car();
         }
     }
 }
