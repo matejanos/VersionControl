@@ -15,7 +15,9 @@ namespace _8gyak_QYE8OW
         public IToyFactory Factory
         {
             get { return _factory; }
-            set { _factory = value;
+            set
+            {
+                _factory = value;
                 DisplayNext();
             }
         }
@@ -71,7 +73,10 @@ namespace _8gyak_QYE8OW
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Factory = new BallFactory();
+            Factory = new BallFactory()
+            {
+                BallColor =  button3.BackColor    
+            };
         }
 
         private void button3_Click(object sender, EventArgs e)

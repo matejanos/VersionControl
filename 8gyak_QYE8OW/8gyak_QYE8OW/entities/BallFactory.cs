@@ -10,9 +10,10 @@ namespace _8gyak_QYE8OW.entities
 {
     public class BallFactory : IToyFactory
     {
+        public Color BallColor { get; set; }
         public Toy CreateNew()
         {
-            return new Ball();
+            return new Ball(BallColor);
         }
     }
 }
