@@ -14,7 +14,7 @@ namespace _8gyak_QYE8OW.entities
         {
             AutoSize = false;
             Width = 50;
-            Height = Height;
+            Height = Width;
             Paint += Ball_Paint;
 
         }
