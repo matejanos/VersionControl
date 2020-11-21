@@ -93,6 +93,8 @@ namespace UnitTestExample.Test
     Test,
     TestCase("irf@uni-corvinus.hu", "Abcd1234")
 ]
+
+
         public void TestRegisterApplicationException(string newEmail, string newPassword)
         {
             // Arrange
