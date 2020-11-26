@@ -29,7 +29,7 @@ namespace QYE8OW_10gyak
             //gc.AddPlayer();
             //gc.Start(true);
             this.Controls.Add(ga);
-            ////gc.GameOver += Gc_GameOver;
+            gc.GameOver += Gc_GameOver;
             for (int i = 0; i < populationSize; i++)
             {
                 gc.AddPlayer(nbrOfSteps);
@@ -52,9 +52,12 @@ namespace QYE8OW_10gyak
                           select p;
             if (winners.Count()>0)
             {
+               
                 winnerBrain = winners.FirstOrDefault().Brain.Clone();
                 gc.GameOver -= Gc_GameOver;
+                button1.Visible = true;
                 return;
+                
             }
 
             gc.ResetCurrentLevel();
@@ -72,6 +75,15 @@ namespace QYE8OW_10gyak
                     gc.AddPlayer(b.Mutate());
             }
             gc.Start();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            gc.ResetCurrentLevel();
+            gc.AddPlayer(winnerBrain.Clone());
+            gc.AddPlayer();
+            ga.Focus();
+            gc.Start(true);
         }
     }
 }
