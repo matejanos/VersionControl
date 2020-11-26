@@ -20,6 +20,8 @@ namespace QYE8OW_10gyak
         {
             InitializeComponent();
             ga = gc.ActivateDisplay();
+            //gc.AddPlayer();
+            //gc.Start(true);
             this.Controls.Add(ga);
         }
     }
