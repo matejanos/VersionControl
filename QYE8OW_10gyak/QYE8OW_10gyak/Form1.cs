@@ -15,6 +15,7 @@ namespace QYE8OW_10gyak
     {
         GameController gc = new GameController();
         GameArea ga;
+        Brain winnerBrain = null;
 
         int populationSize = 100;
         int nbrOfSteps = 10;
@@ -28,7 +29,7 @@ namespace QYE8OW_10gyak
             //gc.AddPlayer();
             //gc.Start(true);
             this.Controls.Add(ga);
-            gc.GameOver += Gc_GameOver;
+            ////gc.GameOver += Gc_GameOver;
             for (int i = 0; i < populationSize; i++)
             {
                 gc.AddPlayer(nbrOfSteps);
@@ -45,6 +46,16 @@ namespace QYE8OW_10gyak
                              orderby p.GetFitness() descending
                              select p;
             var topPerformers = playerList.Take(populationSize / 2).ToList();
+
+            var winners = from p in topPerformers
+                          where p.IsWinner
+                          select p;
+            if (winners.Count()>0)
+            {
+                winnerBrain = winners.FirstOrDefault().Brain.Clone();
+                gc.GameOver -= Gc_GameOver;
+                return;
+            }
 
             gc.ResetCurrentLevel();
             foreach (var p in topPerformers)
